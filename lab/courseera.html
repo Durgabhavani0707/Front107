@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Durga Bhavani – Portfolio Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+    }
+
+    /* Top-left styled name */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: #343a40;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 24px;
+      color: #ffc107;
+      margin: 0;
+    }
+
+    /* Navigation bar */
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 50px;
+      text-align: center;
+    }
+
+    /* About Me */
+    #about img {
+      width: 150px;
+      border-radius: 50%;
+    }
+
+    /* Skills section */
+    #skills {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .skill {
+      background: white;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 120px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .skill img {
+      width: 40px;
+      height: 40px;
+    }
+
+    /* Projects */
+    .project {
+      background: white;
+      margin: 15px auto;
+      padding: 20px;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Recommendations */
+    .recommendation {
+      background: #e9ecef;
+      margin: 10px auto;
+      padding: 15px;
+      max-width: 600px;
+      border-radius: 8px;
+    }
+
+    /* Home icon */
+    #home {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    #home:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Durga Bhavani</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Project Details</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#recommendations">Recommendations</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Me -->
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="profile.jpg" alt="Profile Image">
+    <p>Hello! I am Durga Bhavani, a CSE student passionate about Web Development, AI, and Data Analytics. This is my portfolio website showcasing my work and skills.</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="skill">
+      <img src="https://img.icons8.com/color/48/html-5.png" alt="HTML">
+      <p>HTML</p>
+    </div>
+    <div class="skill">
+      <img src="https://img.icons8.com/color/48/css3.png" alt="CSS">
+      <p>CSS</p>
+    </div>
+    <div class="skill">
+      <img src="https://img.icons8.com/color/48/javascript.png" alt="JavaScript">
+      <p>JavaScript</p>
+    </div>
+    <div class="skill">
+      <img src="https://img.icons8.com/color/48/python.png" alt="Python">
+      <p>Python</p>
+    </div>
+    <div class="skill">
+      <img src="https://img.icons8.com/color/48/git.png" alt="GitHub">
+      <p>GitHub</p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>A responsive personal portfolio built using HTML, CSS, and JavaScript.</p>
+    </div>
+    <div class="project">
+      <h3>To-Do List App</h3>
+      <p>A task management web app with local storage support.</p>
+    </div>
+    <div class="project">
+      <h3>Student Result Management System</h3>
+      <p>A mini project for storing and managing student results.</p>
+    </div>
+  </section>
+
+  <!-- Recommendations -->
+  <section id="recommendations">
+    <h2>Recommendations</h2>
+    <div class="recommendation">"Bhavani is a hardworking student with strong problem-solving skills."</div>
+    <div class="recommendation">"She has a great passion for web development and learning new technologies."</div>
+    <div class="recommendation">"Durga Bhavani is dedicated and always ready to take challenges."</div>
+    
+    <form id="recForm">
+      <textarea id="newRec" rows="3" cols="50" placeholder="Leave a recommendation..."></textarea><br>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Home Icon -->
+  <a href="#top" id="home">🏠</a>
+
+  <script>
+    // Add new recommendation + popup
+    document.getElementById("recForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      let newText = document.getElementById("newRec").value;
+      if(newText.trim() !== "") {
+        let newDiv = document.createElement("div");
+        newDiv.className = "recommendation";
+        newDiv.textContent = newText;
+        document.getElementById("recommendations").appendChild(newDiv);
+
+        alert("Thank you for leaving a recommendation!");
+        document.getElementById("newRec").value = "";
+      }
+    });
+  </script>
+
+</body>
+</html>

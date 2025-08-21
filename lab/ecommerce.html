@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ecommerce</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #f9f9f9, #e3f2fd);
+        }
+
+        header {
+            background-color: #ff6600;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav {
+            margin: 20px;
+        }
+
+        nav h3 {
+            color: #333;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            padding: 5px 0;
+            font-size: 18px;
+        }
+
+        .featured {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .featured h2 {
+            font-size: 2rem;
+            color: #ff6600;
+            margin-bottom: 30px;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            background-color: white;
+            padding: 20px;
+            width: 180px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .product h4 {
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: green;
+        }
+
+        /* Cart box - fixed on right */
+        .cart {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            width: 200px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .cart h3 {
+            color: #ff6600;
+            text-align: center;
+        }
+
+        /* Offers section */
+        .offers {
+            margin: 30px;
+            padding: 20px;
+            background: #fff3cd;
+            border-left: 5px solid #ff9800;
+            border-radius: 10px;
+        }
+
+        .offers h3 {
+            margin: 0;
+            color: #d35400;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        🛒 E-shop - Best Deals Everyday
+    </header>
+
+    <nav>
+        <h3>Categories</h3>
+        <ul>
+            <li>👕 Men's wear</li>
+            <li>👗 Women's wear</li>
+            <li>🧒 Kids' wear</li>
+            <li>🏠 Home appliances</li>
+        </ul>
+    </nav>
+
+    <section class="offers">
+        <h3>🔥 Offers & Flash Sale</h3>
+        <p>👕 50% OFF on Shirts</p>
+        <p>⚡ Flash Sale - Limited Time!</p>
+    </section>
+
+    <section class="featured">
+        <h2>⭐ Featured Products ⭐</h2>
+        <div class="products">
+            <div class="product">
+                <h4>👕 T-Shirt</h4>
+                <p class="price">₹499</p>
+            </div>
+
+            <div class="product">
+                <h4>👟 Shoes</h4>
+                <p class="price">₹1,299</p>
+            </div>
+
+            <div class="product">
+                <h4>📱 Smartphone</h4>
+                <p class="price">₹15,999</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <div class="cart">
+        <h3>🛍 Cart</h3>
+        <p>No items in cart</p>
+    </div>
+
+    <footer>
+        © 2025 E-shop. All rights reserved.
+    </footer>
+
+</body>
+</html>

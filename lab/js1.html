@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title> java script</title>
+</head>
+<body>
+    <h1> Welcome to javascript</h1>
+    <p id ="demo"> originalText</p>
+    <button onclick="document.getElementById('demo').innerHTML = 'text changed! by javascript ';"> 
+    change Text 
+
+    </button>
+    <p id ="styleText"> This test will turn red</p>
+    <button onclick ="document.getElementById('styleText').style.color = 'red'">
+        make red
+    </button>
+    <br><br>
+
+    <div id="box" style="width:100px;height:100px;background: blue;"> </div>
+    <button onclick ="document.getElementById('box').style.background = 'red'">
+    Change to Red
+<br><br>
+    <input id="inputText" placeholder="Enter your name">
+<button onclick="alert('Good morning, ' + document.getElementById('inputText').value)">Greet</button>
+<br><br>
+
+<img id="myImg" src="shinchan.png" width="200">
+
+<button onclick="document.getElementById('myImg').src='example.jpg'">
+    Change Image
+</button>
+<br><br>
+<input type="text" id="email" placeholder="Enter email">
+<button onclick="alert('Your email is: ' + document.getElementById('email').value)">
+  Check Email
+</button>
+
+</button><br><br>
+<img id="Image" src="bulboff.png" width="200"><br>
+<button onclick="document.getElementById('Image').src='bulboff.png';">
+    OFF
+</button>
+<button onclick="document.getElementById('Image').src='bulbon';">
+    ON
+</button>
+   
+</body>
+
+</html>
